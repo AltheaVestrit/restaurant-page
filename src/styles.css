@@ -43,7 +43,7 @@ button:hover {
     border-width: 3px;
 }
 
-div.content-body {
+div#content {
     width: 100%;
     background-color: #faedcd;
     border: 2px solid #D4A373;
@@ -51,14 +51,52 @@ div.content-body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+div.content-body, div.menu-items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 24px;
     padding: 16px 0 32px 0;
+    width: 30%;
 }
 
 img {
-    width: 25%;
+    width: 80%;
 }
 
 div#restaurant-info {
-    width: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+p#quote {
+    font-style: italic;
+    font-size: larger;
+}
+
+p#restaurant-description {
+    text-align: justify;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.menu-item-description {
+    margin-bottom: 0;
+}
+
+.menu-item-img {
+    width: 60%;
+}
+
+.menu-item-price {
+    margin-top: 0;
+    align-self: flex-end;
+    font-style: italic;
 }

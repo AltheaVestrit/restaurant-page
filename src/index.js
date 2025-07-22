@@ -8,20 +8,23 @@ import yaml from './data.yaml';
 import json from './data.json5';
 */
 
-import homeContent from "./home.js";
+import home from "./home.js";
+import menu from "./menu.js";
+import about from "./about.js";
+
 import './styles.css';
 
-const contentObj = { homeContent };
+const contentObj = { home, menu, about };
 
 const contentDiv = document.querySelector("#content");
 
-document.querySelectorAll("button").forEach(el => el.addEventListener("click", e => {
+document.querySelectorAll("nav button").forEach(el => el.addEventListener("click", e => {
     contentDiv.innerHTML = "";
-    document.querySelectorAll("button").forEach(el => el.classList = "");
+    document.querySelectorAll("nav button").forEach(el => el.classList = "");
 
     e.target.classList = "active";
-    contentDiv.appendChild(contentObj[e.target.id + "Content"]);
+    contentDiv.appendChild(contentObj[e.target.id]);
 }));
 
-document.querySelector("#home").classList = "active";
-contentDiv.appendChild(homeContent);
+document.querySelector("button#home").classList = "active";
+contentDiv.appendChild(contentObj["home"]);
