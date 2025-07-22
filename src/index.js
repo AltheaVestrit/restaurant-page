@@ -26,5 +26,7 @@ document.querySelectorAll("nav button").forEach(el => el.addEventListener("click
     contentDiv.appendChild(contentObj[e.target.id]);
 }));
 
+contentDiv.innerHTML = "";
+document.querySelectorAll("nav button").forEach(el => el.classList = "");
 document.querySelector("button#home").classList = "active";
 contentDiv.appendChild(contentObj["home"]);

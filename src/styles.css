@@ -100,3 +100,22 @@ p#restaurant-description {
     align-self: flex-end;
     font-style: italic;
 }
+
+#about-info-container, .info-item, .info-item-content {
+    text-align: center;
+}
+
+.info-item-header {
+    margin: 0;
+    margin-top: 24px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-item-content p a {
+    text-decoration: none;
+}
