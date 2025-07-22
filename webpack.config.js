@@ -23,14 +23,15 @@ module.exports = {
     new HtmlWebpackPlugin({ template: "./src/template.html"}),
   ],
 
-  /*
+
   module: {
           rules: [
               {
-                  // process css files, needs two dev dependencies
+                  // process css files, needs two dev dependencies in specific order
                   test: /\.css$/i,
                   use: ['style-loader', 'css-loader'],
               },
+              /*
               {
                   // process image files, no dependencies needed
                   test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -75,7 +76,7 @@ module.exports = {
                     parse: json5.parse,
                   },
                 },
+                */
           ],
       },
-      */
 };

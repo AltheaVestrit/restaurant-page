@@ -8,6 +8,7 @@ To correctly set up the repo with webpack, you need the following:
 3) create src folder with all source files (index.js, template.html, styles.css, etc.)
 4) create a webpack.config.js file and configure
 5) import necessary modules and files in index.js module
+6) run: $ npx webpack serve (sometimes you need to run 'npx webpack' first)
 
 ==================================================================================
 
