@@ -38,7 +38,7 @@ button:hover {
     cursor: pointer;
 }
 
-button#home {
+.active {
     border-color: #d4a373;
     border-width: 3px;
 }
