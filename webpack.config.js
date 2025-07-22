@@ -31,12 +31,17 @@ module.exports = {
                   test: /\.css$/i,
                   use: ['style-loader', 'css-loader'],
               },
-              /*
               {
-                  // process image files, no dependencies needed
+                  //process image files mentioned in html, needs one dev dependency
+                  test: /\.html$/i,
+                  use: ['html-loader'],
+              },
+              {
+                  // process image files imported in js, no dependencies needed
                   test: /\.(png|svg|jpg|jpeg|gif)$/i,
                   type: 'asset/resource',
               },
+              /*
               {
                   // process font files, no dependencies needed
                   test: /\.(woff|woff2|eot|ttf|otf)$/i,
