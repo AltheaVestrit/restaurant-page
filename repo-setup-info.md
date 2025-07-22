@@ -10,6 +10,16 @@ To correctly set up the repo with webpack, you need the following:
 5) import necessary modules and files in index.js module
 6) run: $ npx webpack serve (sometimes you need to run 'npx webpack' first)
 
+When you're ready to deploy with github pages, run the following commands:
+0) $ git branch gh-pages (you only have to do this once, to create a deploy branch)
+1) make sure all you work is committed to the main branch (you can check with 'git status')
+2) $ git checkout gh-pages && git merge main --no-edit
+3) $ npx webpack
+4) $ git add dist -f && git commit -m "Deployment commit"
+   $ git subtree push --prefix dist origin gh-pages
+   $ git checkout main
+5) change the source branch for GitHub Pages to the gh-pages branch
+
 ==================================================================================
 
 package.json explanation (the package.json file below includes many dependencies, not all might be needed for each project):
